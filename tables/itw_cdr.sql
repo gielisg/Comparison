@@ -1,0 +1,36 @@
+drop table if exists "informix".itw_cdr ;
+create table "informix".itw_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    record_type varchar(30),
+    id_chg varchar(80,9),
+    rec_hash_key varchar(80,22),
+    service_id varchar(63),
+    orig_country_cd varchar(50),
+    orig_number varchar(63),
+    dest_country_cd varchar(50),
+    dest_number varchar(63),
+    dest_info varchar(80),
+    start_time varchar(20),
+    duration integer,
+    measur_unit varchar(10),
+    bill_type_key varchar(120),
+    chg_cluster_key varchar(120),
+    price_incl integer,
+    price_excl integer,
+    tax_type_key varchar(10),
+    invoice_text varchar(200),
+    cre_timestamp varchar(20),
+    rate_incl integer,
+    rate_excl integer,
+    bill_period integer,
+    bill_cycle integer,
+    mandator_key varchar(10),
+    call_category varchar(80),
+    quantity integer,
+    filler1 varchar(80),
+    filler2 varchar(80),
+    filler3 varchar(80)
+  );
+

@@ -1,0 +1,35 @@
+drop table if exists "informix".rpd_vrs_dtl ;
+create table "informix".rpd_vrs_dtl 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    record_type char(1) not null ,
+    seq_num integer not null ,
+    ref_num varchar(50) not null ,
+    loan_app_num varchar(20) not null ,
+    source varchar(128) not null ,
+    branch_nm varchar(50) not null ,
+    valuation_co varchar(128) not null ,
+    valuer varchar(64),
+    vrs_status varchar(20) not null ,
+    evr_type varchar(50),
+    full_addr varchar(255) not null ,
+    suburb varchar(50) not null ,
+    postcode char(4) not null ,
+    state char(3) not null ,
+    acct_num varchar(10) not null ,
+    serv_num varchar(64),
+    creation_tm datetime year to second not null ,
+    complete_tm datetime year to second not null ,
+    markoff_tm datetime year to second,
+    pi_start_dt datetime year to second,
+    pi_done varchar(5),
+    valuation_amt integer,
+    evr_fee decimal(10,2),
+    process_fee decimal(10,2),
+    total_fee decimal(10,2),
+    loc_val_ref varchar(100),
+    pay_status varchar(6) not null ,
+    vrs_qty integer not null 
+  );
+

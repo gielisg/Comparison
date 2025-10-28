@@ -1,0 +1,37 @@
+drop table if exists "informix".sasboss_chg ;
+create table "informix".sasboss_chg 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    enterprise_id varchar(10),
+    enterprise_name varchar(20),
+    invoice_item_id varchar(10),
+    recurring_chrg_id varchar(10),
+    product_type varchar(20),
+    product_id varchar(10),
+    product_name varchar(200),
+    is_nfr varchar(10),
+    group_id varchar(10),
+    group_name varchar(200),
+    service_id varchar(20),
+    service_ref_id varchar(20),
+    did_number varchar(20),
+    item_description varchar(100),
+    period_start varchar(20),
+    period_end varchar(20),
+    pro_rata varchar(20),
+    quantity varchar(20),
+    unit_price varchar(20),
+    discounted_by varchar(20),
+    discounted_tier varchar(20),
+    gst_rate varchar(20),
+    total_ex_gst varchar(20),
+    total_inc_gst varchar(20),
+    gl_account varchar(20),
+    item_code varchar(20),
+    enterprise_ref_num varchar(20),
+    group_ref_num varchar(20),
+    chg_start_dt datetime year to second,
+    chg_end_dt datetime year to second
+  );
+

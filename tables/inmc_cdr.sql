@@ -1,0 +1,37 @@
+drop table if exists "informix".inmc_cdr ;
+create table "informix".inmc_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    invoice_num varchar(20),
+    cust_name varchar(80),
+    vessel_name varchar(30),
+    vessel_sign varchar(30),
+    date_sent char(10),
+    time_sent char(5),
+    from_user varchar(80),
+    from_site varchar(20),
+    to_user varchar(80),
+    to_site varchar(20),
+    int_msg_type varchar(10),
+    msg_length decimal(20,0),
+    cl_charge decimal(13,3),
+    pdn_charge decimal(13,3),
+    pndn char(1),
+    msg_type varchar(20),
+    direction char(1),
+    currency varchar(10),
+    msg_id varchar(20),
+    mrn varchar(30),
+    node_name varchar(10),
+    cust_ar varchar(50),
+    zone varchar(20),
+    member_num varchar(30),
+    country_code varchar(10),
+    group_flag varchar(10,2),
+    dnd varchar(50),
+    dest_length varchar(20),
+    dest_scale varchar(20),
+    billing_id varchar(80)
+  );
+

@@ -1,0 +1,38 @@
+drop table if exists "informix".itw_chg ;
+create table "informix".itw_chg 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    record_type varchar(30),
+    id_chg varchar(80,25),
+    account_id varchar(15),
+    service_id varchar(63),
+    custom_offer varchar(80),
+    pay_freq varchar(80),
+    no_pay_remain integer,
+    tot_no_pay integer,
+    measur_unit varchar(10),
+    bill_type_key varchar(120),
+    chg_cluster_key varchar(120),
+    price_incl integer,
+    price_excl integer,
+    tax_type_key varchar(10),
+    invoice_text varchar(200),
+    cre_timestamp varchar(20),
+    invoice_id varchar(80),
+    bill_period integer,
+    bill_cycle integer,
+    mandator_key varchar(10),
+    chg_category varchar(80),
+    quantity integer,
+    filler1 varchar(80),
+    filler2 varchar(80),
+    filler3 varchar(80),
+    chg_start_dt datetime year to second,
+    chg_end_dt datetime year to second,
+    gl_code varchar(100),
+    product_code varchar(100),
+    from_date varchar(20,10),
+    to_date varchar(20,10)
+  );
+

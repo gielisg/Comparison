@@ -1,0 +1,35 @@
+drop table if exists "informix".symb_cdr ;
+create table "informix".symb_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    call_id varchar(20),
+    account_id varchar(15),
+    service_nm varchar(80),
+    subscri_id integer,
+    subscri_desc varchar(80),
+    start_dt varchar(30),
+    cl_date varchar(10),
+    cl_time varchar(10),
+    connect_dt varchar(20),
+    disconn_dt varchar(20),
+    duration_se integer,
+    duration_min decimal(12,4),
+    cl_direction varchar(80),
+    calling_numo varchar(63),
+    calling_numf varchar(63),
+    call_num_pre char(1),
+    call_num_loc varchar(80),
+    moli_code varchar(20),
+    service_num varchar(63),
+    called_num varchar(63),
+    called_num_loc varchar(80),
+    pair_category varchar(100),
+    charged_amt decimal(12,4),
+    currency_cd varchar(5),
+    rel_cause_num integer,
+    compl_code integer,
+    compl_code_nm varchar(80),
+    site_name varchar(32)
+  );
+

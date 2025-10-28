@@ -1,0 +1,38 @@
+drop table if exists "informix".webill_churn ;
+create table "informix".webill_churn 
+  (
+    churn_id serial not null constraint "informix".n670_3636,
+    event_ref integer not null constraint "informix".n670_3637,
+    nt_file_num integer not null constraint "informix".n670_3638,
+    service_num char(17),
+    basket_num char(3),
+    sign_date char(8),
+    bill_name char(30),
+    bill_addr1 char(30),
+    bill_addr2 char(30),
+    bill_locality char(23),
+    bill_postcode char(4),
+    user_title char(4),
+    user_firstname char(30),
+    user_lastname char(50),
+    user_compname char(50),
+    user_dob char(8),
+    user_employer char(30),
+    user_occ char(30),
+    abn char(18),
+    trading_name char(50),
+    serv_addrtype char(3),
+    serv_addrnumb char(5),
+    serv_addrsuff char(2),
+    serv_numbstart char(5),
+    serv_numbend char(5),
+    serv_numbsuff char(1),
+    serv_strtname char(30),
+    serv_strttype char(4),
+    serv_strtsuff char(2),
+    serv_propname char(30),
+    serv_locality char(30),
+    serv_state char(3),
+    serv_postcode char(4)
+  );
+

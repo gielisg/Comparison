@@ -1,0 +1,37 @@
+drop table if exists "informix".powertel_cdr ;
+create table "informix".powertel_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    rec_type char(6),
+    trans_type varchar(20,1),
+    product_id integer,
+    usage_type integer,
+    id_type integer,
+    id_value varchar(50,1),
+    trans_dtm datetime year to second,
+    secondary_dtm datetime year to second,
+    target varchar(30,1),
+    origin varchar(30,1),
+    rated_units decimal(10,0),
+    amount_charged decimal(18,2),
+    jurisdiction decimal(18,0),
+    fnn char(18),
+    foreign_amt decimal(18,2),
+    currency integer,
+    recipient decimal(10,0),
+    compl_code integer,
+    ctop_rec_id varchar(22),
+    raw_units decimal(10,0),
+    raw_unit_type integer,
+    rated_unit_type integer,
+    base_amount decimal(18,2),
+    second_units decimal(10,0),
+    third_units decimal(10,0),
+    special_field_1 varchar(255),
+    special_field_2 varchar(98,1),
+    service_type_id decimal(6,0),
+    second_id_type decimal(6,0),
+    second_id_value varchar(50,1)
+  );
+

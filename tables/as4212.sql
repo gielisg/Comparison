@@ -1,0 +1,57 @@
+drop table if exists "informix".as4212 ;
+create table "informix".as4212 
+  (
+    address_ref integer not null ,
+    dpid integer,
+    co varchar(64),
+    build_name varchar(32),
+    build_location varchar(32),
+    build_desc varchar(128),
+    build_nmbr varchar(32),
+    build_code varchar(20),
+    level_nmbr varchar(32),
+    level_nmbr_sfx char(1),
+    level_type varchar(10),
+    locality varchar(32,20),
+    lot_nmbr varchar(10),
+    po_box_nmbr varchar(10),
+    po_box_nmbr_pfx varchar(10),
+    po_box_nmbr_sfx char(10),
+    po_box_type varchar(12),
+    postcode varchar(6,4),
+    sort_plan varchar(10),
+    state char(3),
+    street_name varchar(32,20),
+    street_nmbr1 varchar(10,5),
+    street_nmbr_sfx1 varchar(10),
+    street_nmbr2 varchar(10,5),
+    street_nmbr_sfx2 varchar(10),
+    street_type char(5),
+    street_type_sfx varchar(10),
+    unit_nmbr varchar(10),
+    unit_nmbr_sfx varchar(10),
+    unit_nmbr2 varchar(5),
+    unit_nmbr_sfx2 char(1),
+    unit_type varchar(10),
+    grp_did char(1) 
+        default 'N' not null ,
+    barcode varchar(20),
+    alt_postcode varchar(6),
+    alt_locality varchar(32),
+    alt_street_name varchar(32),
+    alt_street_type varchar(5),
+    alt_str_type_sfx varchar(10),
+    street_name2 varchar(32,10),
+    street_type2 char(5),
+    street_type_sfx2 varchar(10),
+    finding_name1 varchar(40),
+    finding_name2 varchar(40),
+    finding_title varchar(12),
+    last_updated datetime year to second 
+        default current year to second not null ,
+    updated_by varchar(18,10) 
+        default user not null ,
+    
+    check (grp_did IN ('Y' ,'N' )) constraint "informix".yes_no
+  );
+

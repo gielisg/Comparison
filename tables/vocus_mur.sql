@@ -1,0 +1,35 @@
+drop table if exists "informix".vocus_mur ;
+create table "informix".vocus_mur 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    switch_type char(2),
+    record_type varchar(5),
+    billable_num varchar(24),
+    calling_num varchar(24),
+    called_num varchar(24),
+    imsi_num varchar(20),
+    call_dt varchar(14),
+    call_duration varchar(10),
+    call_direction char(1),
+    call_product varchar(15),
+    fl_internati char(1),
+    suppl_serv varchar(5),
+    call_type varchar(5),
+    origin varchar(15),
+    destination varchar(15),
+    fl_obroaming char(1),
+    orig_country varchar(32),
+    fl_success char(1),
+    completion_dt varchar(14),
+    service_class char(2),
+    session_id varchar(10),
+    start_dt varchar(14),
+    end_dt varchar(14),
+    vol_downlink varchar(12),
+    vol_uplink varchar(12),
+    apn varchar(20),
+    chg_amt varchar(11),
+    gst_amt varchar(11)
+  );
+

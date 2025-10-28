@@ -1,0 +1,33 @@
+drop table if exists "informix".m2_ons_offs_map ;
+create table "informix".m2_ons_offs_map 
+  (
+    m2of_chg_tp_ref serial not null ,
+    pbi varchar(20) not null ,
+    bec varchar(50) not null ,
+    unit_nt_cost_ex decimal(12,2),
+    chg_code char(4) not null ,
+    auto_exclude char(1) 
+        default 'N' not null ,
+    use_net_price char(1) 
+        default 'N' not null ,
+    net_prc_prorated char(1) 
+        default 'Y' not null ,
+    uplift_perc decimal(10,6) 
+        default 0.000000 not null ,
+    uplift_amt decimal(10,4),
+    use_net_desc char(1) 
+        default 'N' not null ,
+    last_updated datetime year to second 
+        default current year to second not null ,
+    updated_by varchar(18,10) 
+        default user not null ,
+    
+    check (auto_exclude IN ('Y' ,'N' )) constraint "informix".yes_no
+    
+    check (use_net_price IN ('Y' ,'N' )) constraint "informix".yes_no
+    
+    check (net_prc_prorated IN ('Y' ,'N' )) constraint "informix".yes_no
+    
+    check (use_net_desc IN ('Y' ,'N' )) constraint "informix".yes_no
+  );
+

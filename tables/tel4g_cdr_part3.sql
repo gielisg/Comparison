@@ -1,0 +1,38 @@
+drop table if exists "informix".tel4g_cdr_part3 ;
+create table "informix".tel4g_cdr_part3 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    p3_sno integer not null ,
+    p3_part_type char(2),
+    p3_rated_vol_uompk varchar(4),
+    p3_rated_vol_vol varchar(20),
+    p3_round_vol_uompk varchar(4),
+    p3_round_vol_vol varchar(20),
+    p3_rated_amount varchar(15),
+    p3_rated_amt_curr char(3),
+    p3_rated_amt_disc varchar(15),
+    p3_rated_amt_gross char(1),
+    p3_tariff_chrg_qty varchar(2),
+    p3_tariff_intercon char(1),
+    p3_tariff_log_quan varchar(5),
+    p3_tariff_rate_tp char(4),
+    p3_tariff_rtxchgtp char(1),
+    p3_tariff_tt_pkey varchar(10),
+    p3_st_chrg_offset varchar(6),
+    p3_st_chrg_times varchar(14),
+    p3_rf_amt_orig_amt varchar(15),
+    p3_rf_amt_orig_dis varchar(15),
+    p3_rf_amt_orig_grs char(1),
+    p3_chg_flow_direct char(1),
+    p3_chg_disable_tax char(1),
+    p2_tariff_zn_pkey varchar(20),
+    p3_spare2 varchar(20),
+    p3_spare3 varchar(20),
+    p3_spare4 varchar(20),
+    p3_spare5 varchar(20),
+    p3_spare6 varchar(20),
+    p3_spare7 varchar(20),
+    p3_part_separator char(1)
+  );
+

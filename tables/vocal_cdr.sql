@@ -1,0 +1,36 @@
+drop table if exists "informix".vocal_cdr ;
+create table "informix".vocal_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    cdr_type char(2),
+    sequence integer,
+    oidcall varchar(30),
+    starttime datetime year to second,
+    answertime datetime year to second,
+    endtime datetime year to second,
+    sourcename varchar(30),
+    sourceendname varchar(30),
+    sourcecallerid varchar(20),
+    sourcecallername varchar(30),
+    destinationname varchar(30),
+    destinationendname varchar(30),
+    destcallerid varchar(20),
+    destcalleridinfo varchar(20),
+    digits varchar(30),
+    billing varchar(30),
+    authcode varchar(30),
+    calltype char(1),
+    extendedcall char(1),
+    externalcall char(1),
+    duration integer,
+    sipcallid varchar(64),
+    incomingdigits varchar(30),
+    outpulseddigits varchar(30),
+    cic integer,
+    reason integer,
+    origpartition varchar(30),
+    destpartition varchar(30),
+    billedsourceid varchar(30)
+  );
+

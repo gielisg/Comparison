@@ -1,0 +1,35 @@
+drop table if exists "informix".tel_gsmcdma ;
+create table "informix".tel_gsmcdma 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    spid char(5),
+    rcrid char(16),
+    bscode char(2),
+    tscode char(2),
+    cl_start_dt datetime year to second,
+    cl_act_duration integer,
+    cl_duration integer,
+    wsaleatime decimal(14,6),
+    wsalenonatime decimal(14,6),
+    num_called varchar(30),
+    unittype char(1),
+    callingparty char(10),
+    location char(11),
+    tarclasscode char(4),
+    callconnect char(1),
+    specialtype char(2),
+    imeiesn char(16),
+    carriercode char(2),
+    countrycode char(3),
+    zonetype char(2),
+    jkcode char(2),
+    ratecode char(1),
+    atimecallplan char(6),
+    natimecallplan char(6),
+    ntwktype char(4),
+    srvctype char(2),
+    totvol decimal(10,0),
+    voluom char(10)
+  );
+

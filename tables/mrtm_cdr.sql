@@ -1,0 +1,35 @@
+drop table if exists "informix".mrtm_cdr ;
+create table "informix".mrtm_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    mobile_num varchar(30),
+    acct_num varchar(20),
+    term_num varchar(50),
+    event_type varchar(10),
+    event_dt varchar(20),
+    event_cost decimal(13,6),
+    act_duration decimal(12,0),
+    round_duration decimal(12,0),
+    tot_volume decimal(30,0),
+    pre_disc_chg decimal(22,6),
+    rating_tariff varchar(80),
+    time_rate varchar(80),
+    message_class varchar(60),
+    community_id varchar(20),
+    event_ref varchar(20),
+    event_seq decimal(10,0),
+    mvno_id varchar(20),
+    rate_prefix varchar(60),
+    rate_band varchar(60),
+    unused_1 varchar(200),
+    unused_2 varchar(200),
+    unused_3 varchar(200),
+    unused_4 varchar(200),
+    tariff_type_id varchar(200),
+    product varchar(60),
+    pack_id varchar(20),
+    balance_used varchar(20),
+    str_id varchar(60)
+  );
+

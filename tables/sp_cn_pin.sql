@@ -1,0 +1,15 @@
+drop table if exists "informix".sp_cn_pin ;
+create table "informix".sp_cn_pin 
+  (
+    sp_cn_ref integer not null ,
+    pin char(8) not null ,
+    created_tm datetime year to second 
+        default current year to second not null ,
+    created_by varchar(18,10) 
+        default user not null ,
+    last_updated datetime year to second 
+        default current year to second not null ,
+    updated_by varchar(18,10) 
+        default user not null 
+  );
+

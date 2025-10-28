@@ -1,0 +1,35 @@
+drop table if exists "informix".stratos_cdr ;
+create table "informix".stratos_cdr 
+  (
+    nt_file_num integer not null ,
+    nt_file_rec_num integer not null ,
+    invoice_num varchar(20),
+    customer_nm varchar(80),
+    mobile_nm varchar(30),
+    call_sign varchar(12),
+    cl_start_date char(10),
+    cl_start_time char(8),
+    mobile_num varchar(20),
+    cntry_dialed varchar(10),
+    called_num varchar(36),
+    cntry_dialed_nm varchar(30),
+    ocean_region char(4),
+    units decimal(16,8),
+    rat_call_type char(5),
+    network varchar(20),
+    airtime_charge decimal(13,2),
+    incl_usage decimal(13,2),
+    total_charge decimal(13,2),
+    acct_num varchar(30),
+    orig_country varchar(30),
+    dept_bill_code varchar(10),
+    destin_zone varchar(10),
+    call_prefix char(2),
+    prov_state_tax decimal(13,2),
+    federal_tax decimal(13,2),
+    unit_measurei char(3),
+    cl_end_date char(10),
+    cl_end_time char(8),
+    cl_ref_num varchar(32)
+  );
+

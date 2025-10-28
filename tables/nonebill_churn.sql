@@ -1,0 +1,37 @@
+drop table if exists "informix".nonebill_churn ;
+create table "informix".nonebill_churn 
+  (
+    ntwtransid integer not null ,
+    churn_id decimal(9,0) not null ,
+    service_num char(17) not null ,
+    ebill_prod_pkg char(3) not null ,
+    ca_sign_date char(8) not null ,
+    bill_name char(30) not null ,
+    billaddr1 char(30) not null ,
+    billaddr2 char(30),
+    billlocality char(23) not null ,
+    billpostcode char(4) not null ,
+    endusertitle char(4),
+    endusergivnname char(30),
+    enduserfamlname char(50),
+    endusercompname char(50),
+    dob char(8),
+    employer char(30),
+    occupation char(30),
+    acn char(11),
+    tradingname char(50),
+    srvcaddrtype char(3),
+    srvcaddrtypenum char(5),
+    srvcaddrtypesuf char(2),
+    srvcstrnumstrt char(5),
+    srvcstrnumend char(5),
+    srvcstrnumsuff char(1),
+    srvcstrname char(30),
+    srvcstrtype char(4),
+    srvcstrtypesuff char(2),
+    srvcpropname char(30),
+    srvclocality char(30) not null ,
+    srvcstate char(3) not null ,
+    srvcpostcode char(4) not null 
+  );
+
